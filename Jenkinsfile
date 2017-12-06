@@ -33,6 +33,7 @@ node() {
     neoCredentialsId = commonPipelineEnvironment.getConfigProperty('neoCredentialsId')
     proxy = commonPipelineEnvironment.getConfigProperty('proxy') ?: ''
     httpsProxy = commonPipelineEnvironment.getConfigProperty('httpsProxy') ?: ''
+    print "Stage 1 finished"
   }
 
   stage("Validate configuration"){
