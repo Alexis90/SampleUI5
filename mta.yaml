@@ -1,12 +1,12 @@
 _schema-version: "2.0.0"
-ID: "1.0.0"
+ID: "com.sap.d061059.ui5-sample-app"
 version: 0.1.0
 
 parameters:
   hcp-deployer-version: "1.0.0"
 
 modules:
-  - name: "SampleUI5App"
+  - name: "ui5-sample-app"
     type: html5
     path: .
     parameters:
