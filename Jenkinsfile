@@ -25,7 +25,9 @@ node() {
     print "After delete dir"
     dir(APP_PATH) {
       checkout scm
+       print "Before setup"
       setupCommonPipelineEnvironment script: this, configFile: CONFIG_FILE
+       print "Before setup"
     }
     print "After dir"
     MTA_JAR_LOCATION = commonPipelineEnvironment.getConfigProperty('MTA_HOME')
