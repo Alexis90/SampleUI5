@@ -20,6 +20,7 @@ node() {
   CONFIG_FILE = "${SRC}/.pipeline/config.properties"
 
   stage("Clone sources and setup environment"){
+  print "Hello world"
     deleteDir()
     dir(APP_PATH) {
       checkout scm
