@@ -26,6 +26,7 @@ node() {
       checkout scm
       setupCommonPipelineEnvironment script: this, configFile: CONFIG_FILE
     }
+    print "After dir"
     MTA_JAR_LOCATION = commonPipelineEnvironment.getConfigProperty('MTA_HOME')
     NEO_HOME = commonPipelineEnvironment.getConfigProperty('NEO_HOME')
     DEPLOY_HOST = commonPipelineEnvironment.getConfigProperty('DEPLOY_HOST')
