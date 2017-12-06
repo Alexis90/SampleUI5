@@ -20,16 +20,11 @@ node() {
   CONFIG_FILE = "${SRC}/.pipeline/config.properties"
 
   stage("Clone sources and setup environment"){
-  print "Hello world"
     deleteDir()
-    print "After delete dir"
     dir(APP_PATH) {
       checkout scm
-       print "Before setup"
       setupCommonPipelineEnvironment script: this, configFile: CONFIG_FILE
-       print "Before setup"
     }
-    print "After dir"
     MTA_JAR_LOCATION = commonPipelineEnvironment.getConfigProperty('MTA_HOME')
     NEO_HOME = commonPipelineEnvironment.getConfigProperty('NEO_HOME')
     DEPLOY_HOST = commonPipelineEnvironment.getConfigProperty('DEPLOY_HOST')
@@ -37,7 +32,6 @@ node() {
     neoCredentialsId = commonPipelineEnvironment.getConfigProperty('neoCredentialsId')
     proxy = commonPipelineEnvironment.getConfigProperty('proxy') ?: ''
     httpsProxy = commonPipelineEnvironment.getConfigProperty('httpsProxy') ?: ''
-    print "Stage 1 finished"
   }
 
   stage("Validate configuration"){
@@ -74,4 +68,3 @@ node() {
     }
   }
 }
-
