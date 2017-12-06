@@ -22,6 +22,7 @@ node() {
   stage("Clone sources and setup environment"){
   print "Hello world"
     deleteDir()
+    print "After delete dir"
     dir(APP_PATH) {
       checkout scm
       setupCommonPipelineEnvironment script: this, configFile: CONFIG_FILE
