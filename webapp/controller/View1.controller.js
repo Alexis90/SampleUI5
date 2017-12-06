@@ -7,7 +7,7 @@ sap.ui.define([
 	return Controller.extend("com.sap.rig.cp.SampleUI5.controller.View1", {
 		onButtonPressed: function(oEvent){
 			
-			MessageToast.show("Hello!");
+			MessageToast.show("Hello!");  
 			
 			
 		}
